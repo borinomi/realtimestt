@@ -39,7 +39,7 @@ class VoiceRecorderApp:
         self.icon = pystray.Icon("voice_recorder")
         self._update_icon()
 
-        keyboard.add_hotkey("ctrl+shift+space", self.toggle_recording)
+        keyboard.add_hotkey("ctrl+space", self.toggle_recording)
         keyboard.add_hotkey("alt+shift+l", self.cycle_language)
 
     @property
@@ -91,7 +91,7 @@ class VoiceRecorderApp:
                 lambda _, __: self.toggle_recording(),
                 enabled=not self.is_transcribing,
             ),
-            pystray.MenuItem("단축키: Ctrl+Shift+Space", None, enabled=False),
+            pystray.MenuItem("단축키: Ctrl+Space", None, enabled=False),
             pystray.Menu.SEPARATOR,
             pystray.MenuItem("언어 (Alt+Shift+L)", pystray.Menu(*lang_items)),
             pystray.Menu.SEPARATOR,
