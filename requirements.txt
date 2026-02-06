@@ -1,3 +1,6 @@
 RealtimeSTT
+pystray
+Pillow
 keyboard
-pyautogui
+PyAutoGUI
+pyperclip
